@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %} {% endblock%}</title>
+    <title>{% block title %} Vertical Tank Maintenance {% endblock%}</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylesheet.css') }}">
 </head>
 <body>
     <div>
-        <h1>Welcome to Software Design</h1>
+        <h1>Vertical Tank Maintenance</h1>
         <hr>
         <br>
         
         {% block body %}
-
+        <ul>
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="about.html.html"> About </a></li>
+            <li><a href="estimate.html"> Estimate </a></li>
+        </ul>
         {% endblock %}
 
     </div>
+    <footer>
+        @VTM 2020
+    </footer>
 </body>
 </html>
