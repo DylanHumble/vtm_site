@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_template
+from flask import render_template, request, redirect, url_for
 
 app = Flask(__name__)
 
@@ -14,6 +14,13 @@ def about():
 @app.route('/estimate')
 def estimate():
     return render_template('estimate.html')
+    form = request.form
+    radius = form['radius']
+    height = form['height']
+    print(radius)
+    print(height)
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

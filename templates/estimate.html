@@ -3,4 +3,24 @@
 {% block title %} Tank Painting Estimate {% endblock %}
 
 
-{% block body %} It's Mike! {% endblock %}
+{% block body %}
+<main>
+    <body>
+        <h2> VTM Estimator </h2>
+        <hr>
+        <form>
+            <label for="radius">Tank radius:</label>
+            <input type="text" id="radius" name="radius" placeholder="radius in inches" />
+            <br />
+            <br>
+            <label for="height">Tank height:</label>
+            <input type="text" id="height" name="height" placeholder="height in inches" />
+            <br />
+            <br>
+            <input type="submit" id="submit" value="Submit" />
+            <input type="reset" id="clear" value="Clear" />
+        </form>
+    </body>
+</main>
+
+{% endblock %}
