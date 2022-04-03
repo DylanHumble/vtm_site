@@ -1,5 +1,9 @@
 body{
-    background-color: azure;
+    background-color: #333;
+}
+
+h1{
+    color:white;
 }
 
 ul {
@@ -26,3 +30,8 @@ ul {
   li a:hover {
     background-color: #111;
   }
+
+footer{
+    background-color: #333;
+    color: white;
+}
