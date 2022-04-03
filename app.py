@@ -11,14 +11,22 @@ def index():
 def about():
     return render_template('about.html')
 
-@app.route('/estimate')
+@app.route('/estimate', methods=["GET", "POST"])
 def estimate():
+    if request.method == "POST":
+        radius = request.form.get('radius')
+        height = request.form.get('height')
+        top_area = 3.14 * int(radius)**2
+        side_area = 2*(3.14*(int(radius)*int(height)))
+        total_inch = top_area + side_area
+        total_sqft = total_inch / 144
+        mat_cost = total_sqft * 25
+        labor_cost = total_sqft * 15
+        total_estimate = mat_cost + labor_cost
+        s = "{:,.2f}".format(total_estimate)
+        estimate = {"estimate": s}
+        return render_template('estimate.html', **estimate)
     return render_template('estimate.html')
-    form = request.form
-    radius = form['radius']
-    height = form['height']
-    print(radius)
-    print(height)
 
 
 

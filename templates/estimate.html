@@ -8,7 +8,7 @@
     <body>
         <h2> VTM Estimator </h2>
         <hr>
-        <form>
+        <form action="/estimate" method="post">
             <label for="radius">Tank radius:</label>
             <input type="text" id="radius" name="radius" placeholder="radius in inches" />
             <br />
@@ -20,6 +20,9 @@
             <input type="submit" id="submit" value="Submit" />
             <input type="reset" id="clear" value="Clear" />
         </form>
+        <br>
+        <h3>The estimate for painting is ${{ estimate }}</h3>
+        <br>
     </body>
 </main>
 
